@@ -50,9 +50,10 @@ public class ClienteController implements ClienteAPI {
 	}
 
 	@Override
-	public void petchAlteraCliente(UUID idCliente, @Valid ClienteAlteracaoRequest clienteRequAlteracaoRequest) {
+	public void petchAlteraCliente(UUID idCliente, @Valid ClienteAlteracaoRequest clienteAlteracaoRequest) {
 		log.info("[inicia] ClienteController - petchAlteraCliente");
 		log.info("[idCliente] {}", idCliente);
+		clienteService.petchAlteraCliente(idCliente, clienteAlteracaoRequest);
 		log.info("[finaliza] ClienteController - petchAlteraCliente");
 		
 	}
