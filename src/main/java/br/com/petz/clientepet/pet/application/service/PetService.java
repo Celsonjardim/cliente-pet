@@ -6,11 +6,11 @@ import java.util.UUID;
 import br.com.petz.clientepet.pet.application.api.PetClienteListResponse;
 import br.com.petz.clientepet.pet.application.api.PetRequest;
 import br.com.petz.clientepet.pet.application.api.PetResponse;
-import br.com.petz.clientepet.pet.application.api.petClienteDetalhadoResponse;
+import br.com.petz.clientepet.pet.application.api.PetClienteDetalhadoResponse;
 import jakarta.validation.Valid;
 
 public interface PetService {
 	PetResponse criaPet(UUID idCliente, @Valid PetRequest petRequest);
 	List<PetClienteListResponse> buscaPetsDoClienteComID(UUID idCliente);
-	petClienteDetalhadoResponse buscaPetsDoClienteComID(UUID idCliente, UUID idPet);
+	PetClienteDetalhadoResponse buscaPetsDoClienteComID(UUID idCliente, UUID idPet);
 }
