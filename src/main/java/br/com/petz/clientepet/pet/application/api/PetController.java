@@ -56,6 +56,7 @@ public class PetController implements PetAPI {
 			@Valid PetAlteracaoRequest petAlteracaoRequest) {
 		log.info("[inicia] PetController - patchPet");
 		log.info("[idCliente] {} - [idPet] {}", idCliente, idPet);
+		petService.alteraPetDoClienteComID(idCliente, idPet, petAlteracaoRequest);
 		log.info("[finaliza] PetController - patchPet");
 	}
 
